@@ -1,12 +1,23 @@
 :root {
   --color-dark: #10162f;
   --color-pink: #fff0e5;
-  --font-main: "Poppins", sans-serif;
+  --color-white: #ffffff;
+  --fontBase: "Poppins", sans-serif;
+
+  --headline1: bold 45px / 90px var(--fontBase);
+  --headline2: bold 59px / 95px var(--fontBase);
+  --headline3: bold 48px / 78px var(--fontBase);
+  --headline4: bold 34px / 55px var(--fontBase);
+  --headline5: bold 24px / 39px var(--fontBase);
+  --body1: 16px / 25px var(--fontBase);
+  --body2: 14px / 22px var(--fontBase);
+  --button: bold 14px / 22px var(--fontBase);
+  --caption: 12px / 19px var(--fontBase);
 }
 
 * {
   color: var(--color-dark);
-  font-family: var(--font-main);
+  font-family: var(--fontBase);
   text-decoration: none;
   list-style: none;
   padding: 0;
@@ -15,5 +26,9 @@
 }
 
 body {
-  background-color: var(--color-pink);
+  background-color: var(--color-white);
+}
+
+h1 {
+  font: var(--headline1);
 }
