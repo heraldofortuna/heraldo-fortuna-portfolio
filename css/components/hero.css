@@ -1,8 +1,8 @@
-.hero {
+.hero-content {
   border: 1px solid green;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   padding-block-start: 24px;
   padding-block-end: 24px;
 }
