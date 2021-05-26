@@ -1,0 +1,13 @@
+.hero {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.hero-icon {
+  border: 1px solid greenyellow;
+  font-size: 32px;
+  text-align: center;
+}
