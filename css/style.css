@@ -4,5 +4,7 @@
 @import url(./components/menu.css);
 @import url(./components/logo.css);
 @import url(./components/hero.css);
+@import url(./components/footer.css);
+@import url(./components/social-icons.css);
 
 @import url(./containers/wrapper.css);

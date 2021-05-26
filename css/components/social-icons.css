@@ -1,0 +1,17 @@
+.social-icons {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icon {
+  border: 1px solid green;
+}
+
+.social-icon i {
+  color: var(--color-white);
+  font-size: 24px;
+  vertical-align: middle;
+}

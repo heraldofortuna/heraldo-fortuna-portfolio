@@ -1,0 +1,17 @@
+.footer {
+  background-color: var(--color-dark);
+  padding-block-start: 16px;
+  padding-block-end: 16px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-content p {
+  border: 1px solid greenyellow;
+  color: var(--color-white);
+  text-align: center;
+}
