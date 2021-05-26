@@ -2,3 +2,15 @@
   display: flex;
   gap: 12px;
 }
+
+.menu ul li {
+  border: 1px solid blue;
+}
+
+.menu ul a {
+  border: 1px solid red;
+}
+
+.menu ul a:hover {
+  color: var(--color-blue);
+}
