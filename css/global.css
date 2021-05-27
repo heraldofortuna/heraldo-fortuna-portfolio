@@ -12,9 +12,9 @@
   --fontBase: "Poppins", sans-serif;
 
   --headline1: bold 45px / 90px var(--fontBase);
-  --headline2: bold 59px / 95px var(--fontBase);
-  --headline3: bold 48px / 78px var(--fontBase);
-  --headline4: bold 34px / 55px var(--fontBase);
+  --headline2: bold 30px / 60px var(--fontBase);
+  --headline3: 600 20px / 40px var(--fontBase);
+  --headline4: 400 16px / 32px var(--fontBase);
   --headline5: bold 24px / 39px var(--fontBase);
   --body1: 16px / 25px var(--fontBase);
   --body2: 14px / 22px var(--fontBase);
@@ -38,4 +38,16 @@ body {
 
 h1 {
   font: var(--headline1);
+}
+
+h2 {
+  font: var(--headline2);
+}
+
+h3 {
+  font: var(--headline3);
+}
+
+h4 {
+  font: var(--headline4);
 }
