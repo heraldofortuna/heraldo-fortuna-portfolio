@@ -10,6 +10,7 @@
 @import url(./components/project-card.css);
 @import url(./components/blog.css);
 @import url(./components/contact.css);
+@import url(./components/form.css);
 
 @import url(./containers/wrapper.css);
 @import url(./containers/section.css);
