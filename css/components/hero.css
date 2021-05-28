@@ -2,9 +2,14 @@
   border: 1px solid green;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  justify-content: space-between;
+  gap: 48px;
   padding-block-start: 24px;
-  padding-block-end: 24px;
+  padding-block-end: 48px;
+}
+
+.hero-content h1 {
+  border: 1px solid purple;
 }
 
 .hero-icon {
