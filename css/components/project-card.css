@@ -1,6 +1,33 @@
 .project-card {
   background-color: var(--color-white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   border: 1px solid var(--color-dark);
   border-radius: 2px;
-  padding: 8px;
+  padding-block-start: 8px;
+  padding-block-end: 36px;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+  cursor: pointer;
+}
+
+.project-type {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.project-repo {
+  background-color: var(--color-gray-2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  font-weight: 700;
+  padding-block-start: 4px;
+  padding-block-end: 4px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
 }

@@ -11,15 +11,14 @@
   --color-gray-6: #424242;
   --fontBase: "Poppins", sans-serif;
 
-  --headline1: bold 45px / 90px var(--fontBase);
-  --headline2: bold 30px / 60px var(--fontBase);
-  --headline3: 600 20px / 40px var(--fontBase);
-  --headline4: 400 16px / 32px var(--fontBase);
-  --headline5: bold 24px / 39px var(--fontBase);
-  --body1: 16px / 25px var(--fontBase);
-  --body2: 14px / 22px var(--fontBase);
-  --button: bold 14px / 22px var(--fontBase);
-  --caption: 12px / 19px var(--fontBase);
+  --headline1: bold 45px / 80px var(--fontBase);
+  --headline2: bold 30px / 50px var(--fontBase);
+  --headline3: 600 20px / 30px var(--fontBase);
+  --headline4: 400 16px / 22px var(--fontBase);
+  --headline5: bold 24px / 29px var(--fontBase);
+  --body1: 16px / 22px var(--fontBase);
+  --body2: 14px / 18px var(--fontBase);
+  --button: bold 14px / 18px var(--fontBase);
 }
 
 * {
