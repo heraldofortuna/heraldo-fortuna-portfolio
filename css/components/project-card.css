@@ -11,6 +11,11 @@
   padding-inline-start: 8px;
   padding-inline-end: 8px;
   cursor: pointer;
+  transition: 0.25s all ease;
+}
+
+.project-card:hover {
+  box-shadow: -6px 6px 0 var(--color-dark);
 }
 
 .project-type {
@@ -30,4 +35,8 @@
   padding-block-end: 4px;
   padding-inline-start: 12px;
   padding-inline-end: 12px;
+}
+
+.project-repo:hover {
+  background-color: var(--color-gray-1);
 }

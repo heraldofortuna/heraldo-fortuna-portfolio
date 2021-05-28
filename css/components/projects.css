@@ -1,3 +1,17 @@
 .projects {
+  border: 1px solid red;
   background-color: var(--color-pink);
+}
+
+.projects-content {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
 }
