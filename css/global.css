@@ -20,7 +20,7 @@
   --headline5: bold 24px / 29px var(--fontBase);
   --body1: 16px / 22px var(--fontBase);
   --body2: 14px / 18px var(--fontBase);
-  --button: bold 16px / 22px var(--fontBase);
+  --button: 600 18px / 26px var(--fontBase);
 }
 
 * {
