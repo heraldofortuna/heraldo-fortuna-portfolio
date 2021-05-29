@@ -1,0 +1,14 @@
+.button {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  font: var(--button);
+  padding-block-start: 12px;
+  padding-block-end: 12px;
+  border: unset;
+  border-radius: 2px;
+}
+
+.button.is-secondary {
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+}

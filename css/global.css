@@ -2,6 +2,7 @@
   --color-dark: #10162f;
   --color-blue: #3a10e5;
   --color-purple: #6400e4;
+  --color-yellow: #ffd500;
   --color-pink: #fff0e5;
   --color-white: #ffffff;
   --color-gray-1: #f5f5f5;
@@ -19,7 +20,7 @@
   --headline5: bold 24px / 29px var(--fontBase);
   --body1: 16px / 22px var(--fontBase);
   --body2: 14px / 18px var(--fontBase);
-  --button: bold 14px / 18px var(--fontBase);
+  --button: bold 16px / 22px var(--fontBase);
 }
 
 * {
