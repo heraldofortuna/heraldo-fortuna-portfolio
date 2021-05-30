@@ -24,6 +24,15 @@
   --transition: 0.25s all ease;
 }
 
+@media screen and (min-width: 768px) {
+  :root {
+    --headline1: bold 50px / 90px var(--fontBase);
+    --headline2: bold 35px / 60px var(--fontBase);
+    --headline3: 600 25px / 40px var(--fontBase);
+    --headline4: 700 17px / 24px var(--fontBase);
+  }
+}
+
 * {
   color: var(--color-dark);
   text-decoration: none;
