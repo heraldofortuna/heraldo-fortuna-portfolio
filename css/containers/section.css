@@ -2,3 +2,10 @@
   padding-block-start: 32px;
   padding-block-end: 32px;
 }
+
+.section-content {
+  border: 1px solid magenta;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
