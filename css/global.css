@@ -16,8 +16,8 @@
   --headline1: bold 45px / 80px var(--fontBase);
   --headline2: bold 30px / 50px var(--fontBase);
   --headline3: 600 20px / 30px var(--fontBase);
-  --headline4: 500 14px / 22px var(--fontBase);
-  --headline5: bold 24px / 29px var(--fontBase);
+  --headline4: 700 12px / 14px var(--fontBase);
+  --label: 300 14px / 22px var(--fontBase);
   --body1: 16px / 22px var(--fontBase);
   --button: 600 18px / 26px var(--fontBase);
 }
