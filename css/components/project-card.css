@@ -11,7 +11,7 @@
   padding-inline-start: 8px;
   padding-inline-end: 8px;
   cursor: pointer;
-  transition: 0.25s all ease;
+  transition: var(--transition);
 }
 
 .project-card:hover {
@@ -34,11 +34,12 @@
   bottom: 0;
   right: 0;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   padding-block-start: 4px;
   padding-block-end: 4px;
   padding-inline-start: 12px;
   padding-inline-end: 12px;
+  transition: var(--transition);
 }
 
 .project-repo:hover {

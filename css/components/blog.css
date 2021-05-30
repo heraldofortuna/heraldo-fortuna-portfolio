@@ -1,0 +1,13 @@
+.blog-content {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.blog-list {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

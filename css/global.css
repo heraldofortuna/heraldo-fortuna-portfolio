@@ -20,6 +20,8 @@
   --label: 300 14px / 22px var(--fontBase);
   --body1: 16px / 22px var(--fontBase);
   --button: 600 18px / 26px var(--fontBase);
+
+  --transition: 0.25s all ease;
 }
 
 * {
