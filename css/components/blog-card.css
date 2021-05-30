@@ -1,0 +1,23 @@
+.blog-card {
+  box-shadow: 0 1px 4px 2px var(--color-gray-3);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 2px;
+}
+
+.blog-image img {
+  inline-size: 100%;
+  border-radius: 2px 2px 0 0;
+}
+
+.blog-information {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px;
+}
+
+.blog-author {
+  letter-spacing: 0.5px;
+}

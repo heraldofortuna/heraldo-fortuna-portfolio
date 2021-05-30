@@ -1,12 +1,14 @@
 .button {
   background-color: unset;
   color: var(--color-dark);
+  text-align: center;
   font: var(--button);
   padding-block-start: 16px;
   padding-block-end: 16px;
   border: 1px solid var(--color-dark);
   border-radius: 24px;
   cursor: pointer;
+  transition: 0.25s all;
 }
 
 .button:hover {
