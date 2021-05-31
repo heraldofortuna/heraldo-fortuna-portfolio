@@ -12,7 +12,6 @@
 }
 
 .footer-content p {
-  border: 1px solid greenyellow;
   color: var(--color-white);
   text-align: center;
 }
@@ -21,5 +20,9 @@
   .footer {
     padding-block-start: 32px;
     padding-block-end: 32px;
+  }
+
+  .footer-content {
+    gap: 24px;
   }
 }
