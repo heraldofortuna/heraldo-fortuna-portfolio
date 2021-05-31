@@ -15,3 +15,13 @@
   font-size: 24px;
   vertical-align: middle;
 }
+
+.social-icon i:hover {
+  color: var(--color-yellow);
+}
+
+@media screen and (min-width: 1024px) {
+  .social-icon i {
+    font-size: 32px;
+  }
+}

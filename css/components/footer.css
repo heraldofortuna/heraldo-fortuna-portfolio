@@ -1,5 +1,6 @@
 .footer {
   background-color: var(--color-dark);
+  border-top: 1px solid var(--color-gray-3);
   padding-block-start: 16px;
   padding-block-end: 16px;
 }
@@ -14,4 +15,11 @@
   border: 1px solid greenyellow;
   color: var(--color-white);
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-block-start: 32px;
+    padding-block-end: 32px;
+  }
 }
