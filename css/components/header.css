@@ -1,3 +1,11 @@
+.header {
+  border: 1px solid green;
+  background-color: var(--color-white);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .header-content {
   border: 1px solid red;
   height: 60px;

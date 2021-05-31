@@ -1,5 +1,5 @@
 .section {
-  padding-block-start: 32px;
+  padding-block-start: 64px;
   padding-block-end: 32px;
 }
 
@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    padding-block-start: 64px;
+    padding-block-start: 96px;
     padding-block-end: 64px;
   }
 
