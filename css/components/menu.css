@@ -1,6 +1,6 @@
 .menu ul {
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 
 .menu ul a:hover {
