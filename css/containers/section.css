@@ -17,6 +17,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section {
+    padding-block-start: 64px;
+    padding-block-end: 64px;
+  }
+
   .section-title {
     text-align: center;
   }

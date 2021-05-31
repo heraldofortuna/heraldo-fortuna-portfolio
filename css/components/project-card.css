@@ -39,7 +39,7 @@
 }
 
 .project-repo a:hover {
-  color: var(--color-gray-5);
+  color: var(--color-blue);
   text-decoration: underline;
 }
 
