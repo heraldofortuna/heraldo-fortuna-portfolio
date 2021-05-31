@@ -3,6 +3,10 @@
   font-weight: 700;
 }
 
+.logo:hover {
+  color: var(--color-blue);
+}
+
 @media screen and (min-width: 768px) {
   .logo {
     font-size: 26px;
