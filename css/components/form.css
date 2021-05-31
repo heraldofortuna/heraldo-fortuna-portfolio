@@ -1,11 +1,15 @@
 .form {
+  inline-size: 100%;
+  max-inline-size: 450px;
   border: 1px solid yellow;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 24px;
 }
 
 .form label {
+  inline-size: 100%;
   color: var(--color-white);
   display: flex;
   flex-direction: column;
@@ -19,4 +23,9 @@
   border: 1px solid var(--color-gray-3);
   border-radius: 2px;
   padding: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+  }
 }
