@@ -150,7 +150,11 @@
           <div class="section-content">
             <h2 class="section-title">My blog</h2>
             <div class="blog-list">
-              <a class="blog-card" href="#">
+              <a
+                class="blog-card"
+                href="https://dev.to/heraldofortuna"
+                target="_blank"
+              >
                 <div class="blog-image">
                   <img
                     src="./assets/blog-image-1.jpg"
@@ -160,9 +164,8 @@
                 <div class="blog-information">
                   <div class="blog-labels">
                     <span class="label about-general">General</span>
-                    <span class="label about-html">HTML</span>
                   </div>
-                  <h3>Welcome to my Blog!</h3>
+                  <h3>Cursos que todo Frontend Junior debe llevar</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Qui, reprehenderit perferendis inventore numquam mollitia
@@ -171,7 +174,11 @@
                   <h4 class="blog-author">Heraldo Fortuna</h4>
                 </div>
               </a>
-              <a class="blog-card" href="#">
+              <a
+                class="blog-card"
+                href="https://dev.to/heraldofortuna"
+                target="_blank"
+              >
                 <div class="blog-image">
                   <img
                     src="./assets/blog-image-1.jpg"
@@ -181,9 +188,8 @@
                 <div class="blog-information">
                   <div class="blog-labels">
                     <span class="label about-general">General</span>
-                    <span class="label about-html">HTML</span>
                   </div>
-                  <h3>Welcome to my Blog!</h3>
+                  <h3>¿Hay Bootcamps en Perú?</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Qui, reprehenderit perferendis inventore numquam mollitia
@@ -208,13 +214,22 @@
             <h2 class="section-title">Contact me</h2>
             <form class="form" action="POST">
               <label for="name"
-                >Name <input type="text" id="name" placeholder="e.g John Doe" />
+                >Name
+                <input
+                  name="name"
+                  type="text"
+                  id="name"
+                  placeholder="e.g John Doe"
+                  required
+                />
               </label>
               <label for="email"
                 >Email<input
+                  name="email"
                   type="email"
                   id="email"
                   placeholder="e.g johndoe@mail.com"
+                  required
               /></label>
               <label for="message"
                 >Message<textarea
@@ -222,9 +237,10 @@
                   id="message"
                   cols="30"
                   rows="6"
+                  required
                 ></textarea>
               </label>
-              <button class="button is-secondary" type="submit">
+              <button class="button is-secondary" type="submit" value="submit">
                 Send email
               </button>
             </form>
