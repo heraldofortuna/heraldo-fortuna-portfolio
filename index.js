@@ -1,4 +1,4 @@
-// Scroll effect for header section;
+// Scroll effect for header section:
 
 window.onscroll = function () {
   scrollFunction();
@@ -12,3 +12,11 @@ function scrollFunction() {
     document.getElementById("header").style.borderBottom = "unset";
   }
 }
+
+// Scroll effect of Logo anchor:
+
+window.scroll({
+  top: 0,
+  left: 0,
+  behavior: "smooth",
+});
