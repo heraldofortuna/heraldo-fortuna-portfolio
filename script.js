@@ -12,21 +12,3 @@ function scrollFunction() {
     document.getElementById("header").style.borderBottom = "unset";
   }
 }
-
-// Get the form by its id:
-const form = document.getElementById("form");
-
-const formEvent = form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let mail = new FormData(form);
-  sendMail(mail);
-});
-
-const sendMail = (mail) => {
-  fetch("http://www.heraldofortuna.com/send", {
-    method: "post",
-    body: mail,
-  }).then((response) => {
-    return response.json();
-  });
-};
