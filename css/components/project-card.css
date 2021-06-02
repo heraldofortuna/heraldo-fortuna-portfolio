@@ -42,10 +42,6 @@
   text-decoration: underline;
 }
 
-.is-empty {
-  text-decoration: line-through;
-}
-
 .project-repo a.is-empty:hover {
   color: var(--color-dark);
   text-decoration: line-through;

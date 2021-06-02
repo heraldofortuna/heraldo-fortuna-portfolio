@@ -1,3 +1,10 @@
+.wrapper {
+  max-inline-size: 1100px;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  margin: auto;
+}
+
 .section {
   padding-block-start: 64px;
   padding-block-end: 32px;
@@ -12,6 +19,10 @@
 
 .section-title {
   inline-size: 100%;
+}
+
+.is-empty {
+  text-decoration: line-through;
 }
 
 @media screen and (min-width: 768px) {
