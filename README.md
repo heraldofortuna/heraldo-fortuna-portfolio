@@ -21,7 +21,7 @@ Diseñe y programé mi propio portafolio.
 
 <img width="400px" src="https://github.com/heraldofortuna/portfolio/blob/main/assets/screenshot-1.JPG?raw=true" />
 
-<img width="200px" src="https://github.com/heraldofortuna/portfolio/blob/main/assets/screenshot-2.JPG?raw=true" />
+<img width="400px" src="https://github.com/heraldofortuna/portfolio/blob/main/assets/screenshot-2.JPG?raw=true" />
 
 ### Enlaces
 
