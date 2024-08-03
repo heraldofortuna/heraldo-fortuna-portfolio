@@ -1,63 +1,54 @@
-# Mi Portafolio
+# Astro Starter Kit: Basics
 
-Diseñe y programé mi propio portafolio.
+```sh
+npm create astro@latest -- --template basics
+```
 
-## Tabla de Contenidos
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-- [General](#general)
-  - [Captura](#captura)
-  - [Enlaces](#enlaces)
-- [Mi Proceso](#mi-proceso)
-  - [Tecnologías](#tecnologías)
-  - [Lo que aprendí](#lo-que-aprendí)
-  - [Desarrollo continuo](#desarrollo-continuo)
-  - [Recursos](#recursos)
-- [Autor](#autor)
-- [Agradecimientos](#agradecimientos)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## General
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-### Captura
+## 🚀 Project Structure
 
-<img width="400px" src="https://github.com/heraldofortuna/portfolio/blob/main/assets/screenshot-1.JPG?raw=true" />
+Inside of your Astro project, you'll see the following folders and files:
 
-<img width="400px" src="https://github.com/heraldofortuna/portfolio/blob/main/assets/screenshot-2.JPG?raw=true" />
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-### Enlaces
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-- [Repositorio](https://github.com/heraldofortuna/portfolio)
-- [Sitio en vivo](https://www.heraldofortuna.com/)
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-## Mi Proceso
+Any static assets, like images, can be placed in the `public/` directory.
 
-### Tecnologías
+## 🧞 Commands
 
-- HTML5
-- CSS3
-- Flexbox
-- Grid Layout
-- Responsive Design
-- JavaScript
+All commands are run from the root of the project, from a terminal:
 
-### Lo que aprendí
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-Aprendí lo siguiente:
+## 👀 Want to learn more?
 
-- A usar un codebase para css muy interesante.
-
-## Desarrollo continuo
-
-Lo siguiente que haré será darle mantenimiento continuo. Sobretodo al blog que comenzaré a armar.
-
-## Recursos
-
-Todos los recursos usados en este proyecto son de mi autoría.
-
-## Autor
-
-- Heraldo Fortuna - [heraldofortuna.com](https://www.heraldofortuna.com/)
-- Twitter - [@heraldofortuna](https://twitter.com/heraldofortuna)
-
-## Agradecimientos
-
-A mi viejo, por siempre ayudarme a pesar del tiempo.
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

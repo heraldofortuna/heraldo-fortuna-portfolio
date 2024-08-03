@@ -1,8 +1,0 @@
-.menu ul {
-  display: flex;
-  gap: 16px;
-}
-
-.menu ul a:hover {
-  color: var(--color-blue);
-}
