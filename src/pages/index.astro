@@ -2,16 +2,84 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Header from '@components/Header.astro';
+import Button from '@components/Button';
 import defaultPhotoImage from '@images/default-photo.png';
 ---
 
-<Layout title="heraldo Fortuna Landing Website">
+<Layout title="Heraldo Fortuna Website">
 	<Header />
 	<main>
-		<div>
-			<section class="outline outline-green-600">
-				<div>
-					<Image src={defaultPhotoImage} width={500} height={500} alt="My profile picture." />
+		<div class="flex flex-col gap-[32px] md:gap-[64px]">
+			<section class="h-custom-hero-mobile md:h-custom-hero">
+				<div class="h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] pb-[16px]">
+					<div>
+						<Image src={defaultPhotoImage} alt="My profile picture." />
+					</div>
+					<div class="flex flex-col gap-[32px]">
+						<h1 class="flex flex-col gap-[4px] md:gap-[8px] text-center md:text-left text-xl md:text-3xl font-medium">
+							Hello, I'm Heraldo,
+							<div class="flex flex-col">
+								<span class="text-5xl md:text-8xl font-extrabold">Frontend</span>
+								<span class="text-5xl md:text-8xl font-extrabold">Developer</span>
+							</div>
+							based in Lima, Peru.
+						</h1>
+						<div class="hidden md:block">
+							<Button client:load text="Resume" />
+						</div>
+					</div>
+					<div class="block md:hidden">
+						<Button client:load text="Resume" hasFullWidth />
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="flex flex-col gap-[32px] md:gap-[48px]">
+					<div class="flex flex-col gap-[16px] md:32px">
+						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">about.</h2>
+						<p class="md:w-[75%] md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+					</div>
+					<div class="flex flex-col md:items-end">
+						<ul class="md:w-[75%] flex flex-col gap-[16px] md:gap-[32px] md:text-lg">
+							<li class="flex flex-col gap-[4px]">
+								<h3 class="font-semibold">2020 - Present</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+							</li>
+							<li class="flex flex-col gap-[4px]">
+								<h3 class="font-semibold">2018 - 2020</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+							</li>
+							<li class="flex flex-col gap-[4px]">
+								<h3 class="font-semibold">2014 - 2018</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="flex flex-col gap-[32px] md:gap-[48px]">
+					<div class="flex flex-col gap-[16px] md:32px">
+						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">work.</h2>
+						<p class="md:w-[75%] md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+					</div>
+					<div class="flex flex-col md:items-end">
+						<ul class="md:w-[75%] flex flex-col gap-[16px] md:gap-[32px] md:text-lg">
+							<li class="flex flex-col gap-[4px]">
+								<div>
+									
+								</div>
+							</li>
+							<li class="flex flex-col gap-[4px]">
+								<h3 class="font-semibold">2018 - 2020</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+							</li>
+							<li class="flex flex-col gap-[4px]">
+								<h3 class="font-semibold">2014 - 2018</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 		</div>
