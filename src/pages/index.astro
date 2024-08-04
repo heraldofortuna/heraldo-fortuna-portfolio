@@ -1,15 +1,18 @@
 ---
 import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
+import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Button from '@components/Button';
 import defaultPhotoImage from '@images/default-photo.png';
+import firstProjectImage from '@images/project-1.png';
+import secondProjectImage from '@images/project-2.png';
+import contactImage from '@images/contact.png';
 ---
 
 <Layout title="Heraldo Fortuna Website">
 	<Header />
 	<main>
-		<div class="flex flex-col gap-[32px] md:gap-[64px]">
+		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
 			<section class="h-custom-hero-mobile md:h-custom-hero">
 				<div class="h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] pb-[16px]">
 					<div>
@@ -63,22 +66,42 @@ import defaultPhotoImage from '@images/default-photo.png';
 						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">work.</h2>
 						<p class="md:w-[75%] md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
 					</div>
-					<div class="flex flex-col md:items-end">
-						<ul class="md:w-[75%] flex flex-col gap-[16px] md:gap-[32px] md:text-lg">
-							<li class="flex flex-col gap-[4px]">
-								<div>
-									
-								</div>
-							</li>
-							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">2018 - 2020</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
-							</li>
-							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">2014 - 2018</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
-							</li>
-						</ul>
+					<div class="flex flex-col md:flex-row gap-[16px] md:gap-[32px]">
+						<div class="flex flex-col gap-[4px] md:gap-[8px]">
+							<div>
+								<Image src={firstProjectImage} alt="First project." />
+								<span class="text-xs md:text-sm italic">November 24, 2019</span>
+							</div>
+							<h3 class="md:text-lg font-semibold">Some Case Study</h3>
+							<p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.</p>
+						</div>
+						<div class="flex flex-col gap-[4px] md:gap-[8px]">
+							<div>
+								<Image src={secondProjectImage} alt="First project." />
+								<span class="text-xs md:text-sm italic">November 24, 2019</span>
+							</div>
+							<h3 class="md:text-lg font-semibold">Some Case Study</h3>
+							<p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="flex flex-col gap-[32px] md:gap-[48px]">
+					<div class="flex flex-col gap-[16px] md:32px">
+						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">contact.</h2>
+					</div>
+					<div class="flex flex-col md:flex-row gap-[16px] md:gap-[32px]">
+						<div class="w-full md:w-[40%]">
+							<Image src={contactImage} alt="Contact section." />
+						</div>
+						<div class="w-full md:w-[60%] flex flex-col gap-[16px] md:gap-[32px]">
+							<p class="md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+							<ul class="md:text-lg">
+								<li>heraldofortuna@gmail.com</li>
+								<li>twitter.com/johndoe</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>

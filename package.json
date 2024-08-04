@@ -1,10 +1,11 @@
 {
-  "name": "",
+  "name": "heraldo-fortuna-website",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "check": "astro check",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
