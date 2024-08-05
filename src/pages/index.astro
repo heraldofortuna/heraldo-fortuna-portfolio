@@ -4,7 +4,7 @@ import Layout from '@layouts/Layout.astro';
 import Button from '@components/Button';
 import MobileMenu from '@components/MobileMenu';
 import Menu from '@components/Menu';
-import defaultPhotoImage from '@images/default-photo.png';
+import profileImage from '@images/profile.png';
 import firstProjectImage from '@images/cabedex.png';
 import secondProjectImage from '@images/exercises.png';
 import contactImage from '@images/contact.png';
@@ -43,9 +43,9 @@ import githubIcon from '@icons/github.svg';
 		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
 			<Menu client:load />
 			<section class="h-custom-hero-mobile md:h-custom-hero">
-				<div class="relative h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] pb-[16px]">
+				<div class="relative h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] md:gap-[32px] pb-[16px]">
 					<div class="flex items-center justify-center">
-						<Image src={defaultPhotoImage} alt="My profile picture." />
+						<Image src={profileImage} alt="My profile picture." />
 					</div>
 					<div class="flex flex-col gap-[32px]">
 						<h1 class="flex flex-col gap-[4px] md:gap-[8px] text-center md:text-left text-xl md:text-3xl font-medium">
@@ -100,14 +100,14 @@ import githubIcon from '@icons/github.svg';
 							<li class="flex flex-col gap-[4px]">
 								<h3 class="font-semibold">Sugo°</h3>
 								<span class="italic">feb 2022 - jul 2022</span>
-								<p>Work in the frontend team where I refactor, build and maintain components and features using VTEX Legacy and VTEX IO.</p>
-								<p>Lead the maintenance team where tickets were received in Jira to create hotfixes in about 1-2 days.</p>
-								<p>Learn to manage the VTEX vendor administrator where I edited and created functionalities in the CMS, catalog and master data.</p>
+								<p>Collaborate with the frontend team to refactor, build, and maintain components and features using VTEX Legacy and VTEX IO.</p>
+								<p>Lead a maintenance team managing Jira tickets, achieving a 95% on-time resolution rate.</p>
+								<p>Manage VTEX vendor administrator functionalities in CMS, catalog, and master data, increasing efficiency by 50%.</p>
 							</li>
 							<li class="flex flex-col gap-[4px]">
 								<h3 class="font-semibold">Wholemeaning</h3>
 								<span class="italic">may 2021 - oct 2021</span>
-								<p>Be part of the frontend team where we created new applications and improved others.</p>
+								<p>Part of the frontend team, creating new applications and improving existing ones.</p>
 								<p>Work using React + TypeScript + Redux to program robust applications.</p>
 								<p>Learn the Kotlin language to program and create some backend services.</p>
 							</li>
