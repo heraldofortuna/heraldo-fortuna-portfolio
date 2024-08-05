@@ -1,17 +1,44 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
-import Header from '@components/Header.astro';
 import Button from '@components/Button';
+import Menu from '@components/Menu';
 import defaultPhotoImage from '@images/default-photo.png';
 import firstProjectImage from '@images/cabedex.png';
 import secondProjectImage from '@images/project-2.png';
 import contactImage from '@images/contact.png';
 import arrowBottomIcon from '@icons/arrow-bottom.svg';
+import linkedinIcon from '@icons/linkedin.svg';
+import githubIcon from '@icons/github.svg';
 ---
 
 <Layout title="Heraldo Fortuna - Frontend Developer">
-	<Header />
+	<header>
+		<div class="h-[60px] md:h-[80px] flex items-center justify-between gap-[16px]">
+			<div>
+				<span class="md:text-2xl font-semibold">Heraldo Fortuna</span>
+			</div>
+			<Menu client:load />
+			<nav class="hidden md:block">
+				<ul class="flex items-center gap-[32px]">
+					<li class="cursor-pointer"><a href="/">Home</a></li>
+					<li class="cursor-pointer"><a href="#about">About</a></li>
+					<li class="cursor-pointer"><a href="#work">Work</a></li>
+					<li class="cursor-pointer"><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="hidden md:block">
+				<ul class="flex items-center gap-[16px] md:gap-[32px]">
+					<li class="cursor-pointer">
+						<a href="https://www.linkedin.com/in/heraldo-fortuna/" target="_blank"><Image src={linkedinIcon} width={32} height={32} alt="Heraldo Fortuna Linkedin profile site." /></a>
+					</li>
+					<li class="cursor-pointer">
+						<a href="https://github.com/heraldofortuna" target="_blank"><Image src={githubIcon} width={32} height={32} alt="Heraldo Fortuna Github profile site." /></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
 	<main>
 		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
 			<section class="h-custom-hero-mobile md:h-custom-hero">
