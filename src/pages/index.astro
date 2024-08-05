@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
 import Button from '@components/Button';
+import MobileMenu from '@components/MobileMenu';
 import Menu from '@components/Menu';
 import defaultPhotoImage from '@images/default-photo.png';
 import firstProjectImage from '@images/cabedex.png';
@@ -13,15 +14,14 @@ import githubIcon from '@icons/github.svg';
 ---
 
 <Layout title="Heraldo Fortuna - Frontend Developer">
-	<header>
+	<header id="home">
 		<div class="h-[60px] md:h-[80px] flex items-center justify-between gap-[16px]">
 			<div>
 				<span class="md:text-2xl font-semibold">Heraldo Fortuna</span>
 			</div>
-			<Menu client:load />
+			<MobileMenu client:load />
 			<nav class="hidden md:block">
 				<ul class="flex items-center gap-[32px]">
-					<li class="cursor-pointer"><a href="/">Home</a></li>
 					<li class="cursor-pointer"><a href="#about">About</a></li>
 					<li class="cursor-pointer"><a href="#work">Work</a></li>
 					<li class="cursor-pointer"><a href="#contact">Contact</a></li>
@@ -41,9 +41,10 @@ import githubIcon from '@icons/github.svg';
 	</header>
 	<main>
 		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
+			<Menu client:load />
 			<section class="h-custom-hero-mobile md:h-custom-hero">
 				<div class="relative h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] pb-[16px]">
-					<div>
+					<div class="flex items-center justify-center">
 						<Image src={defaultPhotoImage} alt="My profile picture." />
 					</div>
 					<div class="flex flex-col gap-[32px]">

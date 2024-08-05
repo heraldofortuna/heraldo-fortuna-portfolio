@@ -7,8 +7,8 @@
     "paths": {
       "@layouts/*": ["src/layouts/*"],
       "@components/*": ["src/components/*"],
-      "@images/*": ["public/images/*"],
-      "@icons/*": ["public/icons/*"]
+      "@images/*": ["src/assets/images/*"],
+      "@icons/*": ["src/assets/icons/*"]
     }
   }
 }

@@ -1,78 +1,64 @@
-import { useState, useRef, useEffect } from 'react';
-import hamburguerMenuIcon from '@icons/hamburguer-menu.svg';
-import closeIcon from '@icons/close.svg';
+import { useState, useEffect } from 'react';
+import homeIcon from '@icons/home.svg';
+import aboutIcon from '@icons/about.svg';
+import workIcon from '@icons/work.svg';
+import contactIcon from '@icons/contact.svg';
 
 const Menu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const handleScroll = () => {
+    if (window.scrollY > 80) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        closeMenu();
-      }
-    };
+    window.addEventListener('scroll', handleScroll);
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="relative block md:hidden">
-      <button onClick={toggleMenu} className="p-4 text-gray-700">
-        <img src={hamburguerMenuIcon.src} width={32} height={32} alt="Mobile menu" />
-      </button>
-      <div
-        ref={menuRef}
-        className={`fixed top-0 right-0 z-10 w-[75%] h-full bg-dark-brown text-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300`}
-      >
-        <button onClick={toggleMenu} className="absolute top-[16px] right-[32px] text-white">
-          <img src={closeIcon.src} width={32} height={32} alt="Close mobile menu" />
-        </button>
-        <nav className="mt-[64px]">
-          <ul>
-            <li>
-              <a
-                href="#home"
-                onClick={closeMenu}
-                className="block p-[16px] hover:bg-gray-700"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                onClick={closeMenu}
-                className="block p-[16px] hover:bg-gray-700"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#work"
-                onClick={closeMenu}
-                className="block p-[16px] hover:bg-gray-700"
-              >
-                Work
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={closeMenu}
-                className="block p-[16px] hover:bg-gray-700"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <div className={`hidden md:block fixed right-0 z-10 top-[50%] -translate-y-1/2 bg-yellow text-dark-blue border border-r-0 border-dark-brown rounded-l-[8px] transition-transform duration-300 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="#home"
+              className="block p-[16px] rounded-tl-[8px] transition-bg duration-300 hover:bg-light-yellow"
+            >
+              <img src={homeIcon.src} width={32} height={32} alt="Home" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className="block p-[16px] transition-bg duration-300 hover:bg-light-yellow"
+            >
+              <img src={aboutIcon.src} width={32} height={32} alt="About section menu option." />
+            </a>
+          </li>
+          <li>
+            <a
+              href="#work"
+              className="block p-[16px] transition-bg duration-300 hover:bg-light-yellow"
+            >
+              <img src={workIcon.src} width={32} height={32} alt="Work section menu option." />
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              className="block p-[16px] rounded-bl-[8px] transition-bg duration-300 hover:bg-light-yellow"
+            >
+              <img src={contactIcon.src} width={32} height={32} alt="Contact section menu option." />
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
