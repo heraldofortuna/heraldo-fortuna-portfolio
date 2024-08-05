@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import hamburguerMenuIcon from '@icons/hamburguer-menu.svg'
+import linkedinIcon from '@icons/linkedin.svg';
+import githubIcon from '@icons/github.svg';
 ---
 
 <header>
@@ -13,19 +15,19 @@ import hamburguerMenuIcon from '@icons/hamburguer-menu.svg'
     </div>
     <nav class="hidden md:block">
       <ul class="flex items-center gap-[32px]">
-        <li class="cursor-pointer">Home</li>
-        <li class="cursor-pointer">About</li>
-        <li class="cursor-pointer">Work</li>
-        <li class="cursor-pointer">Contact</li>
+        <li class="cursor-pointer"><a href="/">Home</a></li>
+        <li class="cursor-pointer"><a href="#about">About</a></li>
+        <li class="cursor-pointer"><a href="#work">Work</a></li>
+        <li class="cursor-pointer"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="hidden md:block">
-      <ul class="flex items-center gap-[16px]">
+      <ul class="flex items-center gap-[16px] md:gap-[32px]">
         <li class="cursor-pointer">
-          <Image src={hamburguerMenuIcon} width={32} height={32} alt="A normal icon 1." />
+          <a href="https://www.linkedin.com/in/heraldo-fortuna/" target="_blank"><Image src={linkedinIcon} width={32} height={32} alt="Heraldo Fortuna Linkedin profile site." /></a>
         </li>
         <li class="cursor-pointer">
-          <Image src={hamburguerMenuIcon} width={32} height={32} alt="A normal icon 2." />
+          <a href="https://github.com/heraldofortuna" target="_blank"><Image src={githubIcon} width={32} height={32} alt="Heraldo Fortuna Github profile site." /></a>
         </li>
       </ul>
     </div>

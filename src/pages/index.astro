@@ -9,7 +9,7 @@ import secondProjectImage from '@images/project-2.png';
 import contactImage from '@images/contact.png';
 ---
 
-<Layout title="Heraldo Fortuna Website">
+<Layout title="Heraldo Fortuna - Frontend Developer">
 	<Header />
 	<main>
 		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
@@ -36,57 +36,73 @@ import contactImage from '@images/contact.png';
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="about">
 				<div class="flex flex-col gap-[32px] md:gap-[48px]">
 					<div class="flex flex-col gap-[16px] md:32px">
 						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">about.</h2>
-						<p class="md:w-[75%] md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+						<p class="md:w-[75%] md:text-lg">I am a passionate frontend developer dedicated to creating engaging and functional web experiences. With a strong background in HTML, CSS, and JavaScript, I specialize in using modern frameworks like React to build responsive and dynamic user interfaces. I love tackling new challenges and continuously learning new technologies to enhance my skills.</p>
 					</div>
 					<div class="flex flex-col md:items-end">
 						<ul class="md:w-[75%] flex flex-col gap-[16px] md:gap-[32px] md:text-lg">
 							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">2020 - Present</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+								<h3 class="font-semibold">dec 2023 - Present</h3>
+								<p>Work on the new version 2.0 of the Culqi POS application.</p>
+								<p>Work with technologies such as Vue3, Vite, Astro, PWA config, Axios, TypeScript and Nanostores.</p>
 							</li>
 							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">2018 - 2020</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+								<h3 class="font-semibold">oct 2023 - dec 2023</h3>
+								<p>Work on the setup and initial implementation of the Open Banking project like a freelance frontend developer.</p>
+								<p>Work with technologies such as React, Vite, Typescript, Axios and Cognito.</p>
 							</li>
 							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">2014 - 2018</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+								<h3 class="font-semibold">feb 2022 - set 2023</h3>
+								<p>Work in 3 company projects: Arredo, Beautycounter and MasOnline, where I worked with technologies such as VTEX Legacy, VTEX IO, React, Nodejs, JQuery, Graphql, HTML and CSS.</p>
+								<p>Learn JQuery library to make important changes to the checkout of MasOnline project.</p>
+								<p>Work on the integration of Contentful software with VTEX in the Beautycounter project.</p>
+							</li>
+							<li class="flex flex-col gap-[4px]">
+								<h3 class="font-semibold">feb 2022 - jul 2022</h3>
+								<p>Work in the frontend team where I refactor, build and maintain components and features using VTEX Legacy and VTEX IO.</p>
+								<p>Lead the maintenance team where tickets were received in Jira to create hotfixes in about 1-2 days.</p>
+								<p>Learn to manage the VTEX vendor administrator where I edited and created functionalities in the CMS, catalog and master data.</p>
+							</li>
+							<li class="flex flex-col gap-[4px]">
+								<h3 class="font-semibold">may 2021 - oct 2021</h3>
+								<p>Be part of the frontend team where we created new applications and improved others.</p>
+								<p>Work using React + TypeScript + Redux to program robust applications.</p>
+								<p>Learn the Kotlin language to program and create some backend services.</p>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="work">
 				<div class="flex flex-col gap-[32px] md:gap-[48px]">
 					<div class="flex flex-col gap-[16px] md:32px">
 						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">work.</h2>
-						<p class="md:w-[75%] md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+						<p class="md:w-[75%] md:text-lg">Here are some of the projects I've worked on. Each one showcases my skills in frontend development, from creating responsive layouts to implementing complex features. You can find detailed descriptions and links to the code repositories. I'm proud of these projects and the learning opportunities they provided.</p>
 					</div>
 					<div class="flex flex-col md:flex-row gap-[16px] md:gap-[32px]">
-						<div class="flex flex-col gap-[4px] md:gap-[8px]">
+						<a href="https://github.com/heraldofortuna/cabedex-react-typescript" target="_blank" class="md:w-[50%] flex flex-col gap-[4px] md:gap-[8px]">
 							<div>
 								<Image src={firstProjectImage} alt="First project." />
-								<span class="text-xs md:text-sm italic">November 24, 2019</span>
+								<span class="text-xs md:text-sm italic">August 25, 2022</span>
 							</div>
-							<h3 class="md:text-lg font-semibold">Some Case Study</h3>
-							<p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.</p>
-						</div>
-						<div class="flex flex-col gap-[4px] md:gap-[8px]">
+							<h3 class="md:text-lg font-semibold">Cabedex</h3>
+							<p class="text-sm md:text-base">Pokedex made with React, Typescript, Styled-Components and React-Router, with a varied search menu and options.</p>
+						</a>
+						<a href="https://github.com/heraldofortuna/exercises" target="_blank" class="md:w-[50%] flex flex-col gap-[4px] md:gap-[8px]">
 							<div>
 								<Image src={secondProjectImage} alt="First project." />
-								<span class="text-xs md:text-sm italic">November 24, 2019</span>
+								<span class="text-xs md:text-sm italic">January 24, 2021</span>
 							</div>
-							<h3 class="md:text-lg font-semibold">Some Case Study</h3>
-							<p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.</p>
-						</div>
+							<h3 class="md:text-lg font-semibold">Exercises & Solutions</h3>
+							<p class="text-sm md:text-base">Solutions of exercises that I have done throughout my career as a developer. I hope it helps you and don't hesitate to leave me a feedback!</p>
+						</a>
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="contact">
 				<div class="flex flex-col gap-[32px] md:gap-[48px]">
 					<div class="flex flex-col gap-[16px] md:32px">
 						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">contact.</h2>
@@ -96,10 +112,11 @@ import contactImage from '@images/contact.png';
 							<Image src={contactImage} alt="Contact section." />
 						</div>
 						<div class="w-full md:w-[60%] flex flex-col gap-[16px] md:gap-[32px]">
-							<p class="md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</p>
+							<p class="md:text-lg">If you'd like to work with me or have any questions, don't hesitate to get in touch. I am available for frontend development projects, collaborations, and consultations. You can send me an email, connect with me on LinkedIn, or follow me on GitHub to see my latest work and contributions.</p>
 							<ul class="md:text-lg">
 								<li>heraldofortuna@gmail.com</li>
-								<li>twitter.com/johndoe</li>
+								<li>linkedin.com/in/heraldo-fortuna</li>
+								<li>github.com/heraldofortuna</li>
 							</ul>
 						</div>
 					</div>
