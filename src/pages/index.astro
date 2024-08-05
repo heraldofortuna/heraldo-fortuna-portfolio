@@ -4,9 +4,10 @@ import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Button from '@components/Button';
 import defaultPhotoImage from '@images/default-photo.png';
-import firstProjectImage from '@images/project-1.png';
+import firstProjectImage from '@images/cabedex.png';
 import secondProjectImage from '@images/project-2.png';
 import contactImage from '@images/contact.png';
+import arrowBottomIcon from '@icons/arrow-bottom.svg';
 ---
 
 <Layout title="Heraldo Fortuna - Frontend Developer">
@@ -14,7 +15,7 @@ import contactImage from '@images/contact.png';
 	<main>
 		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
 			<section class="h-custom-hero-mobile md:h-custom-hero">
-				<div class="h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] pb-[16px]">
+				<div class="relative h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] pb-[16px]">
 					<div>
 						<Image src={defaultPhotoImage} alt="My profile picture." />
 					</div>
@@ -36,6 +37,9 @@ import contactImage from '@images/contact.png';
 					<div class="block md:hidden">
 						<Button client:load text="Resume" hasFullWidth />
 					</div>
+					<a href="#about" class="hidden absolute bottom-[16px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:flex items-center justify-center cursor-pointer transition-transform duration-300 hover:translate-y-[2px]">
+						<Image src={arrowBottomIcon} width={40} height={40} alt="Bottom arrow for move to about section." />
+					</a>
 				</div>
 			</section>
 			<section id="about">
@@ -87,7 +91,7 @@ import contactImage from '@images/contact.png';
 					<div class="flex flex-col md:flex-row gap-[16px] md:gap-[32px]">
 						<a href="https://github.com/heraldofortuna/cabedex-react-typescript" target="_blank" class="md:w-[50%] flex flex-col gap-[4px] md:gap-[8px]">
 							<div>
-								<Image src={firstProjectImage} alt="First project." />
+								<Image src={firstProjectImage} class="w-full md:h-[300px]" alt="First project." />
 								<span class="text-xs md:text-sm italic">August 25, 2022</span>
 							</div>
 							<h3 class="md:text-lg font-semibold">Cabedex</h3>
@@ -95,7 +99,7 @@ import contactImage from '@images/contact.png';
 						</a>
 						<a href="https://github.com/heraldofortuna/exercises" target="_blank" class="md:w-[50%] flex flex-col gap-[4px] md:gap-[8px]">
 							<div>
-								<Image src={secondProjectImage} alt="First project." />
+								<Image src={secondProjectImage} class="w-full md:h-[300px]" alt="Second project." />
 								<span class="text-xs md:text-sm italic">January 24, 2021</span>
 							</div>
 							<h3 class="md:text-lg font-semibold">Exercises & Solutions</h3>
