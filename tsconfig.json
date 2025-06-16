@@ -5,10 +5,13 @@
     "jsxImportSource": "react",
     "baseUrl": "./",
     "paths": {
-      "@layouts/*": ["src/layouts/*"],
-      "@components/*": ["src/components/*"],
       "@images/*": ["src/assets/images/*"],
-      "@icons/*": ["src/assets/icons/*"]
+      "@icons/*": ["src/assets/icons/*"],
+      "@adapters/*": ["src/adapters/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
     }
   }
 }

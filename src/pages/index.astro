@@ -1,19 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
+import getGitHubRepos from '@adapters/getGitHubRepos';
 import Button from '@components/Button';
 import MobileMenu from '@components/MobileMenu';
 import Menu from '@components/Menu';
 import profileImage from '@images/profile.png';
-import firstProjectImage from '@images/cabedex.png';
-import secondProjectImage from '@images/exercises.png';
 import contactImage from '@images/contact.png';
 import arrowBottomIcon from '@icons/arrow-bottom.svg';
 import linkedinIcon from '@icons/linkedin.svg';
 import githubIcon from '@icons/github.svg';
+
+const repos = await getGitHubRepos('heraldofortuna');
 ---
 
-<Layout title="Heraldo Fortuna - Frontend Developer">
+<Layout>
 	<header id="home">
 		<div class="h-[60px] md:h-[80px] flex items-center justify-between gap-[16px]">
 			<div>
@@ -42,6 +43,7 @@ import githubIcon from '@icons/github.svg';
 	<main>
 		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
 			<Menu client:load />
+
 			<section class="h-custom-hero-mobile md:h-custom-hero">
 				<div class="relative h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] md:gap-[32px] pb-[16px]">
 					<div class="flex items-center justify-center">
@@ -70,77 +72,71 @@ import githubIcon from '@icons/github.svg';
 					</a>
 				</div>
 			</section>
+
 			<section id="about">
 				<div class="flex flex-col gap-[32px] md:gap-[48px]">
 					<div class="flex flex-col gap-[16px] md:32px">
 						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">about.</h2>
-						<p class="md:w-[75%] md:text-lg">I am a passionate frontend developer dedicated to creating engaging and functional web experiences. With a strong background in HTML, CSS, and JavaScript, I specialize in using modern frameworks like React to build responsive and dynamic user interfaces. I love tackling new challenges and continuously learning new technologies to enhance my skills.</p>
+						<p class="md:w-[75%] md:text-lg">
+							Senior Frontend Developer with 5+ years of experience specializing in modern architectures (Vue3, React, TypeScript) and VTEX ecosystems. I led the development of scalable PWAs at Culqi (Vite, Astro, Nanostores) and implemented CMS-Headless integrations (Contentful + VTEX IO) for Beautycounter USA. Expert in performance optimization, state patterns (Redux, GraphQL), and full-stack development (Kotlin, Node.js). PCEP certified and focused on robust solutions with TypeScript and Clean Code.
+						</p>
 					</div>
 					<div class="flex flex-col md:items-end">
 						<ul class="md:w-[75%] flex flex-col gap-[16px] md:gap-[32px] md:text-lg">
 							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">CSTI</h3>
+								<h3 class="font-semibold">Culqi</h3>
 								<span class="italic">dec 2023 - Present</span>
-								<p>Work on the new version 2.0 of the Culqi POS application.</p>
-								<p>Work with technologies such as Vue3, Vite, Astro, PWA config, Axios, TypeScript and Nanostores.</p>
-							</li>
-							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">Renace</h3>
-								<h3 class="italic">oct 2023 - dec 2023</h3>
-								<p>Work on the setup and initial implementation of the Open Banking project like a freelance frontend developer.</p>
-								<p>Work with technologies such as React, Vite, Typescript, Axios and Cognito.</p>
+								<p>Lead the PWA application team where we developed 'My Sales,' 'Payroll Account,' 'Support,' and 'Counters.' From scratch.</p>
+								<p>Work with technologies such as Vue3, Vite, Astro, PWA config, Axios, TypeScript, and Nanostores.</p>
 							</li>
 							<li class="flex flex-col gap-[4px]">
 								<h3 class="font-semibold">Valtech</h3>
 								<span class="italic">feb 2022 - set 2023</span>
-								<p>Work in 3 company projects: Arredo, Beautycounter and MasOnline, where I worked with technologies such as VTEX Legacy, VTEX IO, React, Nodejs, JQuery, Graphql, HTML and CSS.</p>
-								<p>Learn JQuery library to make important changes to the checkout of MasOnline project.</p>
-								<p>Work on the integration of Contentful software with VTEX in the Beautycounter project.</p>
+								<p>Work on the integration of Contentful software with VTEX on the Beautycounter USA project.</p>
+								<p>Participate in two other projects for the company: Arredo and MasOnline, using technologies such as VTEX Legacy, VTEX IO, React, Node.js, jQuery, GraphQL, jQuery, HTML, and CSS.</p>
 							</li>
 							<li class="flex flex-col gap-[4px]">
 								<h3 class="font-semibold">Sugo°</h3>
 								<span class="italic">feb 2022 - jul 2022</span>
-								<p>Collaborate with the frontend team to refactor, build, and maintain components and features using VTEX Legacy and VTEX IO.</p>
-								<p>Lead a maintenance team managing Jira tickets, achieving a 95% on-time resolution rate.</p>
-								<p>Manage VTEX vendor administrator functionalities in CMS, catalog, and master data, increasing efficiency by 50%.</p>
+								<p>Manage the VTEX vendor manager functionality in the CMS, catalog, and master data, increasing efficiency by 50%.</p>
+								<p>Lead the maintenance team, managing tickets and achieving a 95% resolution rate.</p>
 							</li>
 							<li class="flex flex-col gap-[4px]">
-								<h3 class="font-semibold">Wholemeaning</h3>
+								<h3 class="font-semibold">Wird</h3>
 								<span class="italic">may 2021 - oct 2021</span>
-								<p>Part of the frontend team, creating new applications and improving existing ones.</p>
+								<p>Part of the product team, creating new applications and improving existing ones.</p>
 								<p>Work using React + TypeScript + Redux to program robust applications.</p>
-								<p>Learn the Kotlin language to program and create some backend services.</p>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</section>
+
 			<section id="work">
 				<div class="flex flex-col gap-[32px] md:gap-[48px]">
 					<div class="flex flex-col gap-[16px] md:32px">
 						<h2 class="text-too-light-yellow text-5xl md:text-8xl font-extrabold">work.</h2>
 						<p class="md:w-[75%] md:text-lg">Here are some of the projects I've worked on. Each one showcases my skills in frontend development, from creating responsive layouts to implementing complex features. You can find detailed descriptions and links to the code repositories. I'm proud of these projects and the learning opportunities they provided.</p>
 					</div>
-					<div class="flex flex-col md:flex-row gap-[16px] md:gap-[32px]">
-						<a href="https://github.com/heraldofortuna/cabedex-react-typescript" target="_blank" class="md:w-[50%] flex flex-col gap-[4px] md:gap-[8px]">
-							<div>
-								<Image src={firstProjectImage} class="w-full md:h-[300px]" alt="First project." />
-								<span class="text-xs md:text-sm italic">August 25, 2022</span>
-							</div>
-							<h3 class="md:text-lg font-semibold">Cabedex</h3>
-							<p class="text-sm md:text-base">Pokedex made with React, Typescript, Styled-Components and React-Router, with a varied search menu and options.</p>
-						</a>
-						<a href="https://github.com/heraldofortuna/exercises" target="_blank" class="md:w-[50%] flex flex-col gap-[4px] md:gap-[8px]">
-							<div>
-								<Image src={secondProjectImage} class="w-full md:h-[300px]" alt="Second project." />
-								<span class="text-xs md:text-sm italic">January 24, 2021</span>
-							</div>
-							<h3 class="md:text-lg font-semibold">Exercises & Solutions</h3>
-							<p class="text-sm md:text-base">Solutions of exercises that I have done throughout my career as a developer. I hope it helps you and don't hesitate to leave me a feedback!</p>
-						</a>
-					</div>
+					<ul class="grid grid-cols-1 md:grid-cols-3 gap-[16px] md:gap-[32px]">
+						{
+							repos.map((repo: any) => (
+								<li>
+									<a href={repo.url} target="_blank" class="flex flex-col gap-[4px] md:gap-[8px]">
+										<div>
+											<Image src={repo.image} class="w-full md:h-[300px]" width={300} height={300} alt={repo.name} />
+											<span class="text-xs md:text-sm italic">{repo.date}</span>
+										</div>
+										<h3 class="md:text-lg font-semibold">{repo.name}</h3>
+										<p class="text-sm md:text-base">{repo.description}</p>
+									</a>
+								</li>
+							))
+						}
+					</ul>
 				</div>
 			</section>
+
 			<section id="contact">
 				<div class="flex flex-col gap-[32px] md:gap-[48px]">
 					<div class="flex flex-col gap-[16px] md:32px">
