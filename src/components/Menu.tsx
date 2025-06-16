@@ -22,7 +22,7 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className={`hidden md:block fixed right-0 z-10 top-[50%] -translate-y-1/2 bg-yellow text-dark-blue border border-r-0 border-dark-brown rounded-l-[8px] transition-transform duration-300 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}>
+    <div className={`hidden md:block fixed right-0 z-10 top-[50%] -translate-y-1/2 bg-too-light-yellow text-dark-blue border border-r-0 border-dark-brown rounded-l-[8px] transition-transform duration-300 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}>
       <nav>
         <ul>
           <li>
