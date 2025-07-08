@@ -41,16 +41,16 @@ const repos = await getGitHubRepos('heraldofortuna');
 		</div>
 	</header>
 	<main>
-		<div class="flex flex-col gap-[32px] md:gap-[64px] pb-[32px] md:pb-[64px]">
+		<div class="flex flex-col gap-8 md:gap-[64px] pb-8 md:pb-[64px]">
 			<Menu client:load />
 
 			<section class="h-custom-hero-mobile md:h-custom-hero">
-				<div class="relative h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-[16px] md:gap-[32px] pb-[16px]">
+				<div class="relative h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-4 md:gap-8 pb-4">
 					<div class="flex items-center justify-center">
 						<Image src={profileImage} alt="My profile picture." />
 					</div>
-					<div class="flex flex-col gap-[32px]">
-						<h1 class="flex flex-col gap-[4px] md:gap-[8px] text-center md:text-left text-xl md:text-3xl font-medium">
+					<div class="flex flex-col gap-8">
+						<h1 class="flex flex-col gap-1 md:gap-2 text-center md:text-left text-xl md:text-3xl font-medium">
 							Hello, I'm Heraldo,
 							<div class="flex flex-col">
 								<span class="text-5xl md:text-8xl font-extrabold">Frontend</span>
@@ -74,38 +74,38 @@ const repos = await getGitHubRepos('heraldofortuna');
 			</section>
 
 			<section id="about">
-				<div class="flex flex-col gap-[32px] md:gap-[48px]">
-					<div class="flex flex-col gap-[16px] md:32px">
+				<div class="flex flex-col gap-8 md:gap-12">
+					<div class="flex flex-col gap-4 md:gap-8">
 						<h2 class="text-5xl md:text-8xl font-extrabold">about.</h2>
 						<p class="md:w-[75%] md:text-lg">
-							Senior Frontend Developer with 5+ years of experience specializing in modern architectures (Vue3, React, TypeScript) and VTEX ecosystems. I led the development of scalable PWAs at Culqi (Vite, Astro, Nanostores) and implemented CMS-Headless integrations (Contentful + VTEX IO) for Beautycounter USA. Expert in performance optimization, state patterns (Redux, GraphQL), and full-stack development (Kotlin, Node.js). PCEP certified and focused on robust solutions with TypeScript and Clean Code.
+							Senior Frontend Developer with 5+ years of experience specializing in modern architectures (Vue3, React, React Native, TypeScript) and VTEX ecosystems. Led the development of scalable PWAs at Culqi (Vite, Astro, Nanostores) and implemented CMS-Headless integrations (Contentful + VTEX IO) for Beautycounter USA. Expert in performance optimization, state patterns (Redux, GraphQL), and full-stack development (Kotlin, Node.js). PCEP certified and focused on robust solutions with TypeScript and Clean Code.
 						</p>
 					</div>
 					<div class="flex flex-col md:items-end">
-						<ul class="md:w-[75%] flex flex-col gap-[16px] md:gap-[32px] md:text-lg">
-							<li class="flex flex-col gap-[4px]">
+						<ul class="md:w-[75%] flex flex-col gap-4 md:gap-8 md:text-lg">
+							<li class="flex flex-col gap-1">
 								<h3 class="font-semibold">Culqi</h3>
-								<span class="italic">dec 2023 - Present</span>
-								<p>Lead the PWA application team where we developed 'My Sales,' 'Payroll Account,' 'Support,' and 'Counters.' From scratch.</p>
-								<p>Work with technologies such as Vue3, Vite, Astro, PWA config, Axios, TypeScript, and Nanostores.</p>
+								<span class="italic">jan 2024 -jun 2025</span>
+								<p>I led the PWA application team where we developed 'My Sales', 'Payroll Account', 'Support' and 'Counters' from scratch.</p>
+								<p>I worked with technologies such as Vue3, React Native, Vite, Astro, PWA config, Axios, TypeScript and Nanostores.</p>
 							</li>
-							<li class="flex flex-col gap-[4px]">
+							<li class="flex flex-col gap-1">
 								<h3 class="font-semibold">Valtech</h3>
-								<span class="italic">feb 2022 - set 2023</span>
-								<p>Work on the integration of Contentful software with VTEX on the Beautycounter USA project.</p>
-								<p>Participate in two other projects for the company: Arredo and MasOnline, using technologies such as VTEX Legacy, VTEX IO, React, Node.js, jQuery, GraphQL, jQuery, HTML, and CSS.</p>
+								<span class="italic">set 2022 -set 2023</span>
+								<p>I worked on the integration of Contentful software with VTEX on the Beautycounter USA project.</p>
+								<p>Additionally, I participated in two more projects for the company: Arredo and MasOnline, using technologies such as React, React Native, Node.js, jQuery, GraphQL, HTML, CSS, and AWS.</p>
 							</li>
-							<li class="flex flex-col gap-[4px]">
+							<li class="flex flex-col gap-1">
 								<h3 class="font-semibold">Sugo°</h3>
-								<span class="italic">feb 2022 - jul 2022</span>
-								<p>Manage the VTEX vendor manager functionality in the CMS, catalog, and master data, increasing efficiency by 50%.</p>
-								<p>Lead the maintenance team, managing tickets and achieving a 95% resolution rate.</p>
+								<span class="italic">feb 2022 -jul 2022</span>
+								<p>I managed the VTEX supplier manager functionalities in CMS, catalog, and master data, increasing efficiency by 50%.</p>
+								<p>Led the maintenance team, using technologies such as React, Node.js, GraphQL, and AWS.</p>
 							</li>
-							<li class="flex flex-col gap-[4px]">
+							<li class="flex flex-col gap-1">
 								<h3 class="font-semibold">Wird</h3>
-								<span class="italic">may 2021 - oct 2021</span>
-								<p>Part of the product team, creating new applications and improving existing ones.</p>
-								<p>Work using React + TypeScript + Redux to program robust applications.</p>
+								<span class="italic">may 2021 -oct 2021</span>
+								<p>I was part of the product team, creating new applications and improving existing ones.</p>
+								<p>I worked using React, TypeScript, Redux and Kotlin to develop robust applications.</p>
 							</li>
 						</ul>
 					</div>
@@ -113,40 +113,42 @@ const repos = await getGitHubRepos('heraldofortuna');
 			</section>
 
 			<section id="work">
-				<div class="flex flex-col gap-[32px] md:gap-[48px]">
-					<div class="flex flex-col gap-[16px] md:32px">
+				<div class="flex flex-col gap-8 md:gap-12">
+					<div class="flex flex-col gap-4 md:gap-8">
 						<h2 class="text-5xl md:text-8xl font-extrabold">work.</h2>
 						<p class="md:w-[75%] md:text-lg">Here are some of the projects I've worked on. Each one showcases my skills in frontend development, from creating responsive layouts to implementing complex features. You can find detailed descriptions and links to the code repositories. I'm proud of these projects and the learning opportunities they provided.</p>
 					</div>
-					<ul class="grid grid-cols-1 md:grid-cols-3 gap-[16px] md:gap-[32px]">
-						{
-							repos.map((repo: any) => (
-								<li>
-									<a href={repo.url} target="_blank" class="flex flex-col gap-[4px] md:gap-[8px]">
-										<div>
-											<Image src={repo.image} class="w-full md:h-[300px]" width={300} height={300} alt={repo.name} />
-											<span class="text-xs md:text-sm italic">{repo.date}</span>
-										</div>
-										<h3 class="md:text-lg font-semibold">{repo.name}</h3>
-										<p class="text-sm md:text-base">{repo.description}</p>
-									</a>
-								</li>
-							))
-						}
+					<ul class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+						{repos.map((repo: any) => (
+							<li>
+								<div class="h-[180px] md:h-[200px] flex flex-col gap-1 p-4 border border-dark-blue rounded-lg md:gap-2 hover:bg-too-light-yellow transition-all duration-300">
+									<h3 class="md:text-lg font-semibold">{repo.name}</h3>
+									<span class="text-xs md:text-sm italic">{repo.date}</span>
+									<p class="text-sm md:text-base line-clamp-3">{repo.description}</p>
+									<div class="flex items-center justify-end gap-1 text-sm mt-auto">
+										<a href={repo.repoUrl} target="_blank" class="hover:underline">Repo</a><span>|</span>
+										<a href={repo.demoUrl} target="_blank" class="hover:underline">Demo</a>
+									</div>
+								</div>
+							</li>
+						))}
 					</ul>
+					<a href="https://github.com/heraldofortuna?tab=repositories" target="_blank" class="md:w-[400px] md:mx-auto">
+						<Button text="See more" hasFullWidth />
+					</a>
 				</div>
 			</section>
 
 			<section id="contact">
-				<div class="flex flex-col gap-[32px] md:gap-[48px]">
-					<div class="flex flex-col gap-[16px] md:32px">
+				<div class="flex flex-col gap-8 md:gap-12">
+					<div class="flex flex-col gap-4 md:gap-8">
 						<h2 class="text-5xl md:text-8xl font-extrabold">contact.</h2>
 					</div>
-					<div class="flex flex-col md:flex-row gap-[16px] md:gap-[32px]">
+					<div class="flex flex-col md:flex-row gap-4 md:gap-8">
 						<div class="w-full md:w-[40%]">
 							<Image src={contactImage} alt="Contact section." />
 						</div>
-						<div class="w-full md:w-[60%] flex flex-col gap-[16px] md:gap-[32px]">
+						<div class="w-full md:w-[60%] flex flex-col gap-4 md:gap-8">
 							<p class="md:text-lg">If you'd like to work with me or have any questions, don't hesitate to get in touch. I am available for frontend development projects, collaborations, and consultations. You can send me an email, connect with me on LinkedIn, or follow me on GitHub to see my latest work and contributions.</p>
 							<ul class="md:text-lg">
 								<li>heraldofortuna@gmail.com</li>
