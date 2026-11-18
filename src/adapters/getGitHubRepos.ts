@@ -1,5 +1,4 @@
 import gitHubReposService from "@services/gitHubReposService";
-import formatGitHubDate from "@utils/formatGitHubDate";
 
 async function getGitHubRepos(username: string): Promise<any> {
   const repos = await gitHubReposService(username);
@@ -9,8 +8,8 @@ async function getGitHubRepos(username: string): Promise<any> {
 
   const formattedRepos = repostList.map((repo: any) => ({
     name: repo.name,
-    description: repo.description || 'No description provided',
-    date: formatGitHubDate(repo.created_at),
+    description: repo.description,
+    createdAt: repo.created_at,
     image: `https://raw.githubusercontent.com/${username}/${repo.name}/main/public/screenshot.png`,
     stars: repo.stargazers_count,
     repoUrl: repo.html_url,

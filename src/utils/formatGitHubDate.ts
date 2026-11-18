@@ -3,10 +3,9 @@
  * @param isoDateString - Fecha en formato ISO 8601 (ej: "2022-01-20T02:37:33Z")
  * @returns Fecha formateada como "Month Day, Year" (ej: "January 20, 2022")
  */
-function formatGitHubDate(isoDateString: string): string {
+function formatGitHubDate(isoDateString: string, locale = 'en-US'): string {
   const date = new Date(isoDateString);
-  
-  // Verificar si la fecha es válida
+
   if (isNaN(date.getTime())) {
     throw new Error(`Invalid date string: ${isoDateString}`);
   }
@@ -14,10 +13,10 @@ function formatGitHubDate(isoDateString: string): string {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   };
 
-  return date.toLocaleDateString('en-US', options);
+  return date.toLocaleDateString(locale, options);
 }
 
 export default formatGitHubDate;

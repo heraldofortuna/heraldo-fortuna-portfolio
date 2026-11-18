@@ -3,8 +3,10 @@ import homeIcon from '@icons/home.svg';
 import aboutIcon from '@icons/about.svg';
 import workIcon from '@icons/work.svg';
 import contactIcon from '@icons/contact.svg';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Menu = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const handleScroll = () => {
@@ -22,7 +24,9 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className={`hidden md:block fixed right-0 z-10 top-[50%] -translate-y-1/2 bg-light-yellow text-dark-blue border border-r-0 border-dark-brown rounded-l-[8px] transition-transform duration-300 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}>
+    <div
+      className={`hidden md:block fixed right-0 z-10 top-[50%] -translate-y-1/2 bg-light-yellow text-dark-blue border border-r-0 border-dark-brown rounded-l-[8px] transition-transform duration-300 ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}
+    >
       <nav>
         <ul>
           <li>
@@ -30,23 +34,17 @@ const Menu = () => {
               href="#home"
               className="block p-[16px] rounded-tl-[8px] transition-bg duration-300 hover:bg-too-light-yellow"
             >
-              <img src={homeIcon.src} width={32} height={32} alt="Home" />
+              <img src={homeIcon.src} width={32} height={32} alt={t.menu.homeAlt} />
             </a>
           </li>
           <li>
-            <a
-              href="#about"
-              className="block p-[16px] transition-bg duration-300 hover:bg-too-light-yellow"
-            >
-              <img src={aboutIcon.src} width={32} height={32} alt="About section menu option." />
+            <a href="#about" className="block p-[16px] transition-bg duration-300 hover:bg-too-light-yellow">
+              <img src={aboutIcon.src} width={32} height={32} alt={t.menu.aboutAlt} />
             </a>
           </li>
           <li>
-            <a
-              href="#work"
-              className="block p-[16px] transition-bg duration-300 hover:bg-too-light-yellow"
-            >
-              <img src={workIcon.src} width={32} height={32} alt="Work section menu option." />
+            <a href="#work" className="block p-[16px] transition-bg duration-300 hover:bg-too-light-yellow">
+              <img src={workIcon.src} width={32} height={32} alt={t.menu.workAlt} />
             </a>
           </li>
           <li>
@@ -54,7 +52,7 @@ const Menu = () => {
               href="#contact"
               className="block p-[16px] rounded-bl-[8px] transition-bg duration-300 hover:bg-too-light-yellow"
             >
-              <img src={contactIcon.src} width={32} height={32} alt="Contact section menu option." />
+              <img src={contactIcon.src} width={32} height={32} alt={t.menu.contactAlt} />
             </a>
           </li>
         </ul>
