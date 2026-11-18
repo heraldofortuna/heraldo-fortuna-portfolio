@@ -28,7 +28,23 @@ async function gitHubReposService(username: string): Promise<any> {
   // Hacer nueva petición
   const response = await fetch(`https://api.github.com/users/${username}/repos`);
   const data = await response.json();
-  
+
+  if (!Array.isArray(data)) {
+    if (existsSync(cachePath)) {
+      try {
+        const cached = JSON.parse(readFileSync(cachePath, 'utf-8'));
+        if (Array.isArray(cached.data)) {
+          console.warn('GitHub API no devolvió repos; usando caché anterior.');
+          return cached.data;
+        }
+      } catch {
+        // ignore
+      }
+    }
+    console.warn('GitHub API no devolvió repos; se usará lista vacía.');
+    return [];
+  }
+
   // Guardar en cache
   try {
     writeFileSync(cachePath, JSON.stringify({
