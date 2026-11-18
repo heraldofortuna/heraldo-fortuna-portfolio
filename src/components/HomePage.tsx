@@ -98,15 +98,15 @@ const HomePageContent = ({ repos }: HomePageContentProps) => {
           <Menu />
 
           <section className="min-h-custom-hero-mobile md:h-custom-hero md:min-h-0">
-            <div className="relative min-h-[inherit] h-full flex flex-col md:flex-row-reverse md:items-center justify-between gap-4 md:gap-8 py-4 md:py-0 md:pb-4">
-              <div className="order-2 md:order-none w-full max-w-[280px] sm:max-w-[360px] mx-auto md:max-w-[560px] flex items-center justify-center shrink-0">
+            <div className="relative min-h-[inherit] h-full flex flex-col md:flex-row-reverse md:items-center justify-start md:justify-between gap-2 sm:gap-3 md:gap-8 py-4 md:py-0 md:pb-4">
+              <div className="w-full max-w-[280px] sm:max-w-[360px] mx-auto md:max-w-[560px] flex items-center justify-center shrink-0">
                 <img
                   src={profileImage.src}
                   alt={t.hero.profileAlt}
                   className="w-full h-auto max-h-[36svh] sm:max-h-[42svh] md:max-h-none object-contain"
                 />
               </div>
-              <div className="order-1 md:order-none flex flex-col gap-4 sm:gap-8 min-w-0">
+              <div className="flex flex-col gap-2 sm:gap-4 md:gap-8 min-w-0 -mt-1 sm:mt-0">
                 <h1 className="flex flex-col gap-1 md:gap-2 text-center md:text-left text-lg sm:text-xl md:text-3xl font-medium">
                   {t.hero.greeting}
                   <div className="flex flex-col break-words">
@@ -125,7 +125,7 @@ const HomePageContent = ({ repos }: HomePageContentProps) => {
                   </a>
                 </div>
               </div>
-              <div className="order-3 md:order-none block md:hidden w-full">
+              <div className="block md:hidden w-full mt-2 sm:mt-4">
                 <a href={t.hero.resumeHref} download={t.hero.resumeFilename} className="block">
                   <Button text={t.hero.resume} hasFullWidth />
                 </a>
