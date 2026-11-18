@@ -91,7 +91,7 @@ const en: TranslationKeys = {
   about: {
     title: 'about.',
     summary:
-      'Senior frontend developer with 5+ years of experience in modern architectures (Vue3, React, React Native, TypeScript) and VTEX ecosystems. I led the development of scalable PWAs at Culqi (Vite, Astro, Nanostores) and implemented headless CMS integrations (Contentful + VTEX IO) for Beautycounter USA. Expert in performance optimization (Lazy Loading, SSR, and Code Splitting), state patterns (Redux, Zustand, GraphQL), and full-stack development (Kotlin, Node.js). PCEP certified and focused on robust solutions with TypeScript and Clean Code. Experience designing and implementing SPAs and MicroFrontends, including Module Federation.',
+      'Senior frontend developer with 7+ years of experience in modern architectures (Vue3, React, React Native, TypeScript) and VTEX ecosystems. I led the development of scalable PWAs at Culqi (Vite, Astro, Nanostores) and implemented headless CMS integrations (Contentful + VTEX IO) for Beautycounter USA. Expert in performance optimization (Lazy Loading, SSR, and Code Splitting), state patterns (Redux, Zustand, GraphQL), and full-stack development (Kotlin, Node.js). PCEP certified and focused on robust solutions with TypeScript and Clean Code. Experience designing and implementing SPAs and MicroFrontends, including Module Federation.',
     jobs: [
       {
         company: 'itti — Asunción, Paraguay · Senior Software Engineer',
@@ -199,7 +199,7 @@ const es: TranslationKeys = {
   about: {
     title: 'sobre mí.',
     summary:
-      'Desarrollador frontend senior con más de 5 años de experiencia en arquitecturas modernas (Vue3, React, React Native, TypeScript) y ecosistemas VTEX. Lideré el desarrollo de PWAs escalables en Culqi (Vite, Astro, Nanostores) e implementé integraciones CMS-Headless (Contentful + VTEX IO) para Beautycounter USA. Experto en optimización de rendimiento (Lazy Loading, SSR y Code Splitting), patrones de estado (Redux, Zustand, GraphQL) y desarrollo fullstack (Kotlin, Node.js). Certificado PCEP y enfocado en soluciones robustas con TypeScript y Clean Code. Experiencia en arquitectura e implementación de SPA y MicroFrontends, con manejo de Module Federation.',
+      'Desarrollador frontend senior con más de 7 años de experiencia en arquitecturas modernas (Vue3, React, React Native, TypeScript) y ecosistemas VTEX. Lideré el desarrollo de PWAs escalables en Culqi (Vite, Astro, Nanostores) e implementé integraciones CMS-Headless (Contentful + VTEX IO) para Beautycounter USA. Experto en optimización de rendimiento (Lazy Loading, SSR y Code Splitting), patrones de estado (Redux, Zustand, GraphQL) y desarrollo fullstack (Kotlin, Node.js). Certificado PCEP y enfocado en soluciones robustas con TypeScript y Clean Code. Experiencia en arquitectura e implementación de SPA y MicroFrontends, con manejo de Module Federation.',
     jobs: [
       {
         company: 'itti — Asunción, Paraguay · Ingeniero de software senior',
