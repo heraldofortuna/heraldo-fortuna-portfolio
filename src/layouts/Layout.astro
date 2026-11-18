@@ -15,6 +15,16 @@ const url = Astro.url.href;
 <!doctype html>
 <html lang="en">
 	<head>
+		<script is:inline>
+			(function () {
+				try {
+					var stored = localStorage.getItem('portfolio-lang');
+					if (stored === 'es' || stored === 'en') {
+						document.documentElement.lang = stored;
+					}
+				} catch (e) {}
+			})();
+		</script>
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={url} />
