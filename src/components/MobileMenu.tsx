@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import hamburguerMenuIcon from '@icons/hamburguer-menu.svg';
 import closeIcon from '@icons/close.svg';
 import linkedinIcon from '@icons/linkedin.svg';
@@ -8,65 +9,55 @@ import { useLanguage } from '../i18n/LanguageContext';
 const MobileMenu = () => {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+  const [mounted, setMounted] = useState(false);
 
-  const toggleMobileMenu = () => setIsOpen((open) => !open);
+  const openMobileMenu = () => setIsOpen(true);
   const closeMobileMenu = () => setIsOpen(false);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+    document.body.style.overflow = 'hidden';
+
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
         closeMobileMenu();
       }
     };
+    document.addEventListener('keydown', onEscape);
 
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
     return () => {
       document.body.style.overflow = '';
+      document.removeEventListener('keydown', onEscape);
     };
   }, [isOpen]);
 
-  return (
-    <>
-      <div className="relative block md:hidden shrink-0">
-        <button
-          onClick={toggleMobileMenu}
-          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[8px]"
-          type="button"
-          aria-expanded={isOpen}
-          aria-label={isOpen ? t.mobileMenu.closeAlt : t.mobileMenu.openAlt}
-        >
-          <img src={hamburguerMenuIcon.src} width={28} height={28} alt="" />
-        </button>
-      </div>
-      {isOpen && (
-        <>
-          <button
-            type="button"
-            className="fixed inset-0 z-[15] bg-dark-blue/30 md:hidden"
-            aria-label={t.mobileMenu.closeAlt}
-            onClick={closeMobileMenu}
-          />
-          <div
-            ref={mobileMenuRef}
-            className="fixed top-0 right-0 z-[20] w-[min(85%,320px)] h-full max-h-[100dvh] bg-dark-brown text-white shadow-xl transform translate-x-0 transition-transform duration-300 ease-out md:hidden"
-            style={{
-              paddingTop: 'env(safe-area-inset-top)',
-              paddingBottom: 'env(safe-area-inset-bottom)',
-            }}
-          >
-            <div className="flex h-full flex-col">
+  const drawer =
+    isOpen && mounted
+      ? createPortal(
+          <>
+            <button
+              type="button"
+              className="fixed inset-0 z-[100] bg-dark-blue/40 md:hidden"
+              aria-label={t.mobileMenu.closeAlt}
+              onClick={closeMobileMenu}
+            />
+            <div
+              className="fixed top-0 right-0 z-[110] flex h-[100dvh] w-[min(85vw,320px)] flex-col bg-dark-brown text-white shadow-xl md:hidden"
+              role="dialog"
+              aria-modal="true"
+              aria-label={t.mobileMenu.openAlt}
+              style={{
+                paddingTop: 'env(safe-area-inset-top)',
+                paddingBottom: 'env(safe-area-inset-bottom)',
+              }}
+            >
               <div className="flex items-center justify-end px-4 pt-3">
                 <button
                   onClick={closeMobileMenu}
@@ -91,7 +82,7 @@ const MobileMenu = () => {
                       <a
                         href={href}
                         onClick={closeMobileMenu}
-                        className="block min-h-[48px] px-4 py-3 text-lg font-medium rounded-[8px] active:bg-white/10"
+                        className="block min-h-[48px] rounded-[8px] px-4 py-3 text-lg font-medium active:bg-white/10"
                       >
                         {label}
                       </a>
@@ -124,9 +115,25 @@ const MobileMenu = () => {
                 </li>
               </ul>
             </div>
-          </div>
-        </>
-      )}
+          </>,
+          document.body,
+        )
+      : null;
+
+  return (
+    <>
+      <div className="relative block shrink-0 md:hidden">
+        <button
+          onClick={isOpen ? closeMobileMenu : openMobileMenu}
+          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[8px]"
+          type="button"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? t.mobileMenu.closeAlt : t.mobileMenu.openAlt}
+        >
+          <img src={hamburguerMenuIcon.src} width={28} height={28} alt="" />
+        </button>
+      </div>
+      {drawer}
     </>
   );
 };
