@@ -8,6 +8,7 @@ import formatGitHubDate from '@utils/formatGitHubDate';
 import Button from './Button';
 import LanguageSwitch from './LanguageSwitch';
 import Menu from './Menu';
+import AboutExperienceList from './AboutExperienceList';
 import MobileMenu from './MobileMenu';
 
 export type PortfolioRepo = {
@@ -148,19 +149,7 @@ const HomePageContent = ({ repos }: HomePageContentProps) => {
                 <p className="text-base md:w-[75%] md:text-lg">{t.about.summary}</p>
               </div>
               <div className="flex flex-col md:items-end">
-                <ul className="md:w-[75%] flex flex-col gap-6 md:gap-8 text-base md:text-lg">
-                  {t.about.jobs.map((job) => (
-                    <li key={job.company} className="flex flex-col gap-2">
-                      <h3 className="font-semibold">{job.company}</h3>
-                      <span className="italic text-sm sm:text-base">{job.period}</span>
-                      {job.paragraphs.map((paragraph, index) => (
-                        <p key={`${job.company}-${index}`} className="leading-relaxed">
-                          {paragraph}
-                        </p>
-                      ))}
-                    </li>
-                  ))}
-                </ul>
+                <AboutExperienceList />
               </div>
             </div>
           </section>
