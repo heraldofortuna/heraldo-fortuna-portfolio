@@ -86,13 +86,13 @@ const HomePageContent = ({ repos }: HomePageContentProps) => {
                   {t.hero.location}
                 </h1>
                 <div className="hidden md:block">
-                  <a href="/cv-heraldo-fortuna.pdf" download="Heraldo_Fortuna_CV.pdf">
+                  <a href={t.hero.resumeHref} download={t.hero.resumeFilename}>
                     <Button text={t.hero.resume} />
                   </a>
                 </div>
               </div>
               <div className="block md:hidden">
-                <a href="/cv-heraldo-fortuna.pdf" download="Heraldo_Fortuna_CV.pdf" className="block">
+                <a href={t.hero.resumeHref} download={t.hero.resumeFilename} className="block">
                   <Button text={t.hero.resume} hasFullWidth />
                 </a>
               </div>

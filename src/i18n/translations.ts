@@ -17,6 +17,8 @@ export type TranslationKeys = {
     roleLine2: string;
     location: string;
     resume: string;
+    resumeHref: string;
+    resumeFilename: string;
     profileAlt: string;
     arrowAlt: string;
   };
@@ -81,44 +83,56 @@ const en: TranslationKeys = {
     roleLine2: 'Developer',
     location: 'based in Lima, Peru.',
     resume: 'Resume',
+    resumeHref: '/cv-heraldo-fortuna-en.pdf',
+    resumeFilename: 'Heraldo_Fortuna_CV_EN.pdf',
     profileAlt: 'My profile picture.',
     arrowAlt: 'Bottom arrow to move to the about section.',
   },
   about: {
     title: 'about.',
     summary:
-      'Senior Frontend Developer with 5+ years of experience specializing in modern architectures (Vue3, React, React Native, TypeScript) and VTEX ecosystems. Led the development of scalable PWAs at Culqi (Vite, Astro, Nanostores) and implemented CMS-Headless integrations (Contentful + VTEX IO) for Beautycounter USA. Expert in performance optimization, state patterns (Redux, GraphQL), and full-stack development (Kotlin, Node.js). PCEP certified and focused on robust solutions with TypeScript and Clean Code.',
+      'Senior frontend developer with 5+ years of experience in modern architectures (Vue3, React, React Native, TypeScript) and VTEX ecosystems. I led the development of scalable PWAs at Culqi (Vite, Astro, Nanostores) and implemented headless CMS integrations (Contentful + VTEX IO) for Beautycounter USA. Expert in performance optimization (Lazy Loading, SSR, and Code Splitting), state patterns (Redux, Zustand, GraphQL), and full-stack development (Kotlin, Node.js). PCEP certified and focused on robust solutions with TypeScript and Clean Code. Experience designing and implementing SPAs and MicroFrontends, including Module Federation.',
     jobs: [
       {
-        company: 'Culqi',
-        period: 'jan 2024 - jun 2025',
+        company: 'itti — Asunción, Paraguay · Senior Software Engineer',
+        period: 'oct 2025 – present',
         paragraphs: [
-          "I led the PWA application team where we developed 'My Sales', 'Payroll Account', 'Support' and 'Counters' from scratch.",
-          'I worked with technologies such as Vue3, React Native, Vite, Astro, PWA config, Axios, TypeScript and Nanostores.',
+          'Led code reviews and provided technical mentorship to the engineering team.',
+          'Built frontend applications with React and TypeScript, integrating APIs and defining quality and architecture standards.',
+          'Collaborated with backend, product, and UX/UI to ship features, using Zustand for state, accessibility (a11y), and performance with Lazy Loading, SSR, and Code Splitting.',
         ],
       },
       {
-        company: 'Valtech',
-        period: 'set 2022 - set 2023',
+        company: 'Culqi — Lima, Peru · Senior Frontend Developer',
+        period: 'jan 2024 – jun 2025',
         paragraphs: [
-          'I worked on the integration of Contentful software with VTEX on the Beautycounter USA project.',
-          'Additionally, I participated in two more projects for the company: Arredo and MasOnline, using technologies such as React, React Native, Node.js, jQuery, GraphQL, HTML, CSS, and AWS.',
+          "Led the PWA applications team, where we built 'My Sales', 'Payroll Account', 'Support', and 'Counters' from scratch, with code reviews, technical mentorship, and interface definition alongside UX/UI.",
+          'Worked with Vue3, React Native, Vite, Astro, PWA config, Axios, TypeScript, and Nanostores, and NgRx for Angular module state. Optimized performance with Lazy Loading, SSR, and Code Splitting, and applied accessibility (a11y) criteria.',
+          'Architected these products as SPAs and MicroFrontends with Module Federation, consuming microservices and APIs.',
         ],
       },
       {
-        company: 'Sugo°',
-        period: 'feb 2022 - jul 2022',
+        company: 'Valtech — Buenos Aires, Argentina · SSR Frontend Developer',
+        period: 'sep 2022 – sep 2023',
         paragraphs: [
-          'I managed the VTEX supplier manager functionalities in CMS, catalog, and master data, increasing efficiency by 50%.',
-          'Led the maintenance team, using technologies such as React, Node.js, GraphQL, and AWS.',
+          'Integrated Contentful with VTEX for Beautycounter USA.',
+          'Arredo and MasOnline projects: React, React Native, Node.js, jQuery, GraphQL, HTML, CSS, AWS.',
+          'Hooks, NgRx, advanced CSS, and TailwindCSS with UX/UI.',
         ],
       },
       {
-        company: 'Wird',
-        period: 'may 2021 - oct 2021',
+        company: 'Sugo° — Lima, Peru · Junior Frontend Developer',
+        period: 'feb 2022 – jul 2022',
         paragraphs: [
-          'I was part of the product team, creating new applications and improving existing ones.',
-          'I worked using React, TypeScript, Redux and Kotlin to develop robust applications.',
+          'VTEX supplier manager in CMS, catalog, and master data (+50% efficiency).',
+          'Led maintenance with React, Node.js, GraphQL, AWS; Git/GitHub/Azure DevOps, CI/CD.',
+        ],
+      },
+      {
+        company: 'Wird — Santiago, Chile · Full-Stack Developer',
+        period: 'may 2021 – oct 2021',
+        paragraphs: [
+          'Product and UX/UI; React, TypeScript, Redux, Zustand, Kotlin; TDD; GitHub Copilot.',
         ],
       },
     ],
@@ -177,44 +191,56 @@ const es: TranslationKeys = {
     roleLine2: 'Frontend',
     location: 'con base en Lima, Perú.',
     resume: 'Currículum',
+    resumeHref: '/cv-heraldo-fortuna-es.pdf',
+    resumeFilename: 'Heraldo_Fortuna_CV_ES.pdf',
     profileAlt: 'Mi foto de perfil.',
     arrowAlt: 'Flecha hacia abajo para ir a la sección sobre mí.',
   },
   about: {
     title: 'sobre mí.',
     summary:
-      'Desarrollador Frontend Senior con más de 5 años de experiencia, especializado en arquitecturas modernas (Vue3, React, React Native, TypeScript) y ecosistemas VTEX. Lideré el desarrollo de PWAs escalables en Culqi (Vite, Astro, Nanostores) e implementé integraciones CMS-Headless (Contentful + VTEX IO) para Beautycounter USA. Experto en optimización de rendimiento, patrones de estado (Redux, GraphQL) y desarrollo full-stack (Kotlin, Node.js). Certificado PCEP y enfocado en soluciones robustas con TypeScript y Clean Code.',
+      'Desarrollador frontend senior con más de 5 años de experiencia en arquitecturas modernas (Vue3, React, React Native, TypeScript) y ecosistemas VTEX. Lideré el desarrollo de PWAs escalables en Culqi (Vite, Astro, Nanostores) e implementé integraciones CMS-Headless (Contentful + VTEX IO) para Beautycounter USA. Experto en optimización de rendimiento (Lazy Loading, SSR y Code Splitting), patrones de estado (Redux, Zustand, GraphQL) y desarrollo fullstack (Kotlin, Node.js). Certificado PCEP y enfocado en soluciones robustas con TypeScript y Clean Code. Experiencia en arquitectura e implementación de SPA y MicroFrontends, con manejo de Module Federation.',
     jobs: [
       {
-        company: 'Culqi',
-        period: 'ene 2024 - jun 2025',
+        company: 'itti — Asunción, Paraguay · Ingeniero de software senior',
+        period: 'oct 2025 – actualidad',
         paragraphs: [
-          "Lideré el equipo de aplicaciones PWA donde desarrollamos desde cero 'Mis Ventas', 'Cuenta de Haberes', 'Soporte' y 'Contadores'.",
-          'Trabajé con tecnologías como Vue3, React Native, Vite, Astro, configuración PWA, Axios, TypeScript y Nanostores.',
+          'Lideré code reviews y brindé mentoría técnica al equipo de ingeniería.',
+          'Desarrollé aplicaciones frontend con React y TypeScript, integrando APIs y definiendo estándares de calidad y arquitectura.',
+          'Trabajé con backend, producto y UX/UI para entregar funcionalidades, con estado en Zustand, accesibilidad (a11y) y rendimiento mediante Lazy Loading, SSR y Code Splitting.',
         ],
       },
       {
-        company: 'Valtech',
-        period: 'set 2022 - set 2023',
+        company: 'Culqi — Lima, Perú · Desarrollador frontend senior',
+        period: 'ene 2024 – jun 2025',
         paragraphs: [
-          'Trabajé en la integración del software Contentful con VTEX en el proyecto Beautycounter USA.',
-          'Además, participé en dos proyectos más para la empresa: Arredo y MasOnline, usando tecnologías como React, React Native, Node.js, jQuery, GraphQL, HTML, CSS y AWS.',
+          "Lideré el equipo de aplicaciones PWA, donde desarrollamos 'My Sales', 'Payroll Account', 'Support' y 'Counters' desde cero, con code reviews, mentoría técnica y definición de la interfaz junto a UX/UI.",
+          'Trabajé con Vue3, React Native, Vite, Astro, PWA config, Axios, TypeScript y Nanostores, y con NgRx para el estado de los módulos Angular. Optimicé rendimiento con Lazy Loading, SSR y Code Splitting, y apliqué criterios de accesibilidad (a11y).',
+          'Arquitecturé estos productos como SPA y MicroFrontends, con Module Federation y consumo de microservicios y APIs.',
         ],
       },
       {
-        company: 'Sugo°',
-        period: 'feb 2022 - jul 2022',
+        company: 'Valtech — Buenos Aires, Argentina · Desarrollador frontend SSR',
+        period: 'set 2022 – set 2023',
         paragraphs: [
-          'Gestioné las funcionalidades del gestor de proveedores VTEX en CMS, catálogo y master data, aumentando la eficiencia en un 50%.',
-          'Lideré el equipo de mantenimiento, usando tecnologías como React, Node.js, GraphQL y AWS.',
+          'Integración Contentful con VTEX en Beautycounter USA.',
+          'Proyectos Arredo y MasOnline: React, React Native, Node.js, jQuery, GraphQL, HTML, CSS, AWS.',
+          'Hooks, NgRx, CSS avanzado y TailwindCSS con UX/UI.',
         ],
       },
       {
-        company: 'Wird',
-        period: 'may 2021 - oct 2021',
+        company: 'Sugo° — Lima, Perú · Desarrollador frontend jr',
+        period: 'feb 2022 – jul 2022',
         paragraphs: [
-          'Formé parte del equipo de producto, creando nuevas aplicaciones y mejorando las existentes.',
-          'Trabajé con React, TypeScript, Redux y Kotlin para desarrollar aplicaciones robustas.',
+          'VTEX supplier manager en CMS, catálogo y master data (+50% eficiencia).',
+          'Lideré mantenimiento con React, Node.js, GraphQL, AWS; Git/GitHub/Azure DevOps, CI/CD.',
+        ],
+      },
+      {
+        company: 'Wird — Santiago de Chile · Desarrollador fullstack',
+        period: 'may 2021 – oct 2021',
+        paragraphs: [
+          'Producto y UX/UI; React, TypeScript, Redux, Zustand, Kotlin; TDD; GitHub Copilot.',
         ],
       },
     ],
