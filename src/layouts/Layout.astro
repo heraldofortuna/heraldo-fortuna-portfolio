@@ -6,22 +6,21 @@ interface Props {
 }
 
 const { title, description, image } = Astro.props;
-const pageTitle = title || "Heraldo Fortuna - Frontend Developer";
+const pageTitle = title || "Heraldo Fortuna - Desarrollador Frontend";
 const pageDescription = description || "Portafolio profesional de Heraldo Fortuna, desarrollador frontend especializado en React, TypeScript y tecnologías web modernas. Explora mis proyectos, experiencia laboral y habilidades en desarrollo frontend.";
 const pageImage = image || "/favicon-32x32.png";
 const url = Astro.url.href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<script is:inline>
 			(function () {
 				try {
 					var stored = localStorage.getItem('portfolio-lang');
-					if (stored === 'es' || stored === 'en') {
-						document.documentElement.lang = stored;
-					}
+					var lang = stored === 'es' || stored === 'en' ? stored : 'es';
+					document.documentElement.lang = lang;
 				} catch (e) {}
 			})();
 		</script>
