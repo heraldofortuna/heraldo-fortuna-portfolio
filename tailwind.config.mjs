@@ -11,8 +11,11 @@ export default {
 				'too-light-yellow': '#F7F197',
 			},
 			height: {
-				'custom-hero-mobile': 'calc(100vh - 60px)',
+				'custom-hero-mobile': 'calc(100svh - 60px - env(safe-area-inset-top, 0px))',
 				'custom-hero': 'calc(100vh - 80px)',
+			},
+			minHeight: {
+				'custom-hero-mobile': 'calc(100svh - 60px - env(safe-area-inset-top, 0px))',
 			},
 		},
 	},

@@ -53,12 +53,12 @@ const url = Astro.url.href;
 		<meta charset="UTF-8" />
 		<meta name="title" content={pageTitle} />
 		<meta name="description" content={pageDescription} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body>
-		<div class="w-[90%] max-w-[1200px] my-0 mx-auto">
+	<body class="overflow-x-hidden">
+		<div class="w-full max-w-[1200px] px-4 sm:w-[92%] sm:px-0 md:w-[90%] my-0 mx-auto pb-[env(safe-area-inset-bottom)]">
 			<slot />
 		</div>
 	</body>
@@ -77,5 +77,12 @@ const url = Astro.url.href;
 		background: var(--light-yellow);
 		color: var(--dark-blue);
 		scroll-behavior: smooth;
+		overflow-x: hidden;
+	}
+
+	body {
+		padding-top: env(safe-area-inset-top);
+		padding-left: env(safe-area-inset-left);
+		padding-right: env(safe-area-inset-right);
 	}
 </style>
