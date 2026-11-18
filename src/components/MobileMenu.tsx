@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import hamburguerMenuIcon from '@icons/hamburguer-menu.svg';
 import closeIcon from '@icons/close.svg';
@@ -6,17 +6,15 @@ import linkedinIcon from '@icons/linkedin.svg';
 import githubIcon from '@icons/github.svg';
 import { useLanguage } from '../i18n/LanguageContext';
 
+const subscribeNoop = () => () => {};
+
 const MobileMenu = () => {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [mounted, setMounted] = useState(false);
+  const isClient = useSyncExternalStore(subscribeNoop, () => true, () => false);
 
   const openMobileMenu = () => setIsOpen(true);
   const closeMobileMenu = () => setIsOpen(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     if (!isOpen) {
@@ -39,7 +37,7 @@ const MobileMenu = () => {
   }, [isOpen]);
 
   const drawer =
-    isOpen && mounted
+    isOpen && isClient
       ? createPortal(
           <>
             <button
@@ -122,10 +120,10 @@ const MobileMenu = () => {
 
   return (
     <>
-      <div className="relative block shrink-0 md:hidden">
+      <div className="relative z-20 block shrink-0 touch-manipulation md:hidden">
         <button
           onClick={isOpen ? closeMobileMenu : openMobileMenu}
-          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[8px]"
+          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[8px] touch-manipulation"
           type="button"
           aria-expanded={isOpen}
           aria-label={isOpen ? t.mobileMenu.closeAlt : t.mobileMenu.openAlt}
