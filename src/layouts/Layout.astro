@@ -18,7 +18,7 @@ const url = Astro.url.href;
 		<script is:inline>
 			(function () {
 				try {
-					var stored = localStorage.getItem('portfolio-lang');
+					var stored = localStorage.getItem('portfolio-lang-v2');
 					var lang = stored === 'es' || stored === 'en' ? stored : 'es';
 					document.documentElement.lang = lang;
 				} catch (e) {}

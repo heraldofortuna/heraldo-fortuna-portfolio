@@ -3,6 +3,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
   type ReactNode,
@@ -57,7 +58,12 @@ function applyDocumentLocale(locale: Locale, t: TranslationKeys) {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(readStoredLocale);
+  // Match Astro SSR (always DEFAULT_LOCALE); sync user preference after mount.
+  const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
+
+  useLayoutEffect(() => {
+    setLocaleState(readStoredLocale());
+  }, []);
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
