@@ -97,8 +97,8 @@ const HomePageContent = ({ repos }: HomePageContentProps) => {
         <div className="flex flex-col gap-8 md:gap-[64px] pb-8 md:pb-[64px]">
           <Menu />
 
-          <section className="min-h-custom-hero-mobile md:h-custom-hero md:min-h-0">
-            <div className="relative min-h-[inherit] h-full flex flex-col md:flex-row-reverse md:items-center justify-start md:justify-between gap-2 sm:gap-3 md:gap-8 py-4 md:py-0 md:pb-4">
+          <section className="min-h-custom-hero-mobile md:h-custom-hero md:min-h-0 flex flex-col">
+            <div className="relative flex-1 min-h-0 flex flex-col md:flex-row-reverse md:items-center justify-start md:justify-between gap-2 sm:gap-3 md:gap-8 py-4 md:py-0 md:pb-4">
               <div className="w-full max-w-[280px] sm:max-w-[360px] mx-auto md:max-w-[560px] flex items-center justify-center shrink-0">
                 <img
                   src={profileImage.src}
@@ -125,7 +125,7 @@ const HomePageContent = ({ repos }: HomePageContentProps) => {
                   </a>
                 </div>
               </div>
-              <div className="block md:hidden w-full mt-2 sm:mt-4">
+              <div className="block md:hidden w-full mt-auto pt-2 pb-1">
                 <a href={t.hero.resumeHref} download={t.hero.resumeFilename} className="block">
                   <Button text={t.hero.resume} hasFullWidth />
                 </a>
